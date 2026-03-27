@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+float balance = 1000.0;
+
+void deposit(float amt) { balance += amt; }
+void withdraw(float amt) { if (amt <= balance) balance -= amt; else printf("Insufficient funds\n"); }
+
+int main() {
+    deposit(500);
+    withdraw(200);
+    printf("Balance: %.2f\n", balance);
+    return 0;
+}
