@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+struct Question {
+    char text[100];
+    char optionA[50], optionB[50];
+    char correct;
+};
+
+int main() {
+    struct Question q = {"Capital of India?", "A) Delhi", "B) Mumbai", 'A'};
+    char ans;
+    printf("%s\n%s\n%s\n", q.text, q.optionA, q.optionB);
+    printf("Your answer: "); scanf(" %c", &ans);
+
+    if (ans == q.correct) printf("Correct!\n");
+    else printf("Wrong!\n");
+    return 0;
+}
